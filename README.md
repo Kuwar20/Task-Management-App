@@ -1,6 +1,8 @@
-# Task Management App
+<h1 align="center">Task Management App</h1>
 
-## [Live Demo](https://task-management-app-nusj.vercel.app/)
+<p align="center">
+  <a href="https://task-management-app-nusj.vercel.app/"><b>Live Demo</b></a>
+</p>
 
 ## Overview
 The Task Management App is a simple web application built with React and Next.js. It allows users to manage their tasks efficiently, offering functionalities to add, edit, delete, and mark tasks as completed. The app also supports dynamic sorting of tasks by priority and features server-side rendering for initial task loading.
@@ -46,7 +48,7 @@ const sortedTasks = [...tasks].sort((a, b) => {
   // Sort by priority: High -> Medium -> Low
   return priorityOrder[a.priority] - priorityOrder[b.priority];
 });
-
+```
 
 ## Technologies Used
 - **Frontend**: React, Next.js
