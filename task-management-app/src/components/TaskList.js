@@ -31,7 +31,7 @@ const TaskList = ({ tasks, onDeleteTask, onEditTask, onToggleComplete }) => {
   };
 
   return (
-    <ul className="w-full">
+    <ul className="w-full sm:w-1/2 mx-auto">
       {tasks.map((task) => (
         <li key={task.id} className={`bg-white border ${getPriorityColor(task.priority)} border-l-4 mb-4 p-4 rounded-lg shadow ${task.completed ? 'opacity-60' : ''}`}>
           {editingTask && editingTask.id === task.id ? (
@@ -63,13 +63,12 @@ const TaskList = ({ tasks, onDeleteTask, onEditTask, onToggleComplete }) => {
               <button onClick={handleSave} className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Save</button>
             </div>
           ) : (
-            <div className="flex justify-between items-center">
-              <div>
-                <h3 className="text-lg font-semibold">{task.title}</h3>
-                <p className="text-gray-600">{task.description}</p>
-                <span className="text-sm text-gray-500">{task.priority}</span>
-              </div>
-              <div className="flex space-x-2">
+            <div>
+              <h3 className="text-lg font-semibold">{task.title}</h3>
+              <p className="text-gray-600">{task.description}</p>
+              <span className="text-sm text-gray-500">{task.priority}</span>
+              {/* Responsive button layout */}
+              <div className="flex flex-row-reverse space-x-reverse space-x-2 mt-2">
                 <button onClick={() => onToggleComplete(task.id)} className="bg-green-500 text-white p-2 rounded hover:bg-green-600">
                   {task.completed ? 'Undo' : 'Complete'}
                 </button>

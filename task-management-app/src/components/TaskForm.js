@@ -17,7 +17,7 @@ const TaskForm = ({ onAddTask }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full mb-8">
+    <form onSubmit={handleSubmit} className="w-1/2 sm:w-1/2 mb-8">
       <div className="flex flex-col space-y-4">
         <input
           type="text"

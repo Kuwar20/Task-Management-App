@@ -65,7 +65,7 @@ export default function Home({ initialTasks }) {
           placeholder="Search tasks..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-2 text-base mb-4 border border-gray-300 rounded"
+          className="w-1/2 p-2 text-base mb-4 border border-gray-300 rounded"
         />
         <TaskList
           tasks={filteredTasks}
